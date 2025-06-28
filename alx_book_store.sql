@@ -22,14 +22,14 @@ CREATE TABLE Customers (
     address TEXT
 );
 
-CREATE TABLE ORDERS (
+CREATE TABLE Orders (
     order_id INT PRIMARY KEY AUTO_INCREMENT,
     customer_id INT,
     order_date DATE,
     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 );
 
-CREATE TABLE ORDER_DETAILS (
+CREATE TABLE order_details (
     orderdetailid INT PRIMARY KEY AUTO_INCREMENT,
     order_id INT,
     book_id INT,
