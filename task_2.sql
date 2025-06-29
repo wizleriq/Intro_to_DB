@@ -1,5 +1,11 @@
-CREATE DATABASE IF NOT EXISTS tast_2
+CREATE DATABASE IF NOT EXISTS task_2;
 USE task_2;
+
+CREATE TABLE Authors (
+    author_id INT PRIMARY KEY AUTO_INCREMENT,
+    author_name VARCHAR(215) NOT NULL
+);
+
 
 CREATE TABLE Books (
     book_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -8,11 +14,6 @@ CREATE TABLE Books (
     price DOUBLE,
     publication_date DATE,
     FOREIGN KEY (author_id) REFERENCES Authors(author_id)
-);
-
-CREATE TABLE Authors (
-    author_id INT PRIMARY KEY AUTO_INCREMENT,
-    author_name VARCHAR(215) NOT NULL
 );
 
 CREATE TABLE Customers (
