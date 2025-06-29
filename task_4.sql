@@ -7,6 +7,6 @@ SELECT
 FROM
     INFORMATION_SCHEMA.COLUMNS
 WHERE
-     TABLE_SCHEMA = DATABASE()
+     TABLE_SCHEMA = 'alx_book_store',
      AND TABLE_NAME = "Books";
 
